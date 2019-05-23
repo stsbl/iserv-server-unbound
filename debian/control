@@ -10,6 +10,7 @@ Package: stsbl-iserv-server-unbound
 Architecture: all
 Depends: ${misc:Depends},
   ${perl:Depends},
+  dns-root-data,
   iserv-update,
   iserv-ssl,
   unbound,
