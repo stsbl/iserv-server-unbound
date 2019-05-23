@@ -1,0 +1,33 @@
+server:
+    # Enable or disable whether TCP queries are answered or issued.
+    do-tcp: yes
+
+    # Enable  or disable whether the upstream queries use TCP only for
+    # transport. Useful in tunneling scenarios.
+    tcp-upstream: no
+
+    # Enabled or disable whether the upstream queries use SSL only for
+    # transport.
+    ssl-upstream: no
+
+    # If enabled id.server and hostname.bind queries are refused.
+    hide-identity: yes
+
+    # If enabled version.server and version.bind queries are refused.
+    hide-version: yes
+
+    # If yes, Unbound doesn't insert authority/additional sections
+    # into response messages when those sections are not required.
+    minimal-responses: yes
+
+    # If yes, message cache elements are prefetched before they expire
+    # to keep the cache up to date.
+    prefetch: yes
+
+    # Use 0x20-encoded random bits in the query to foil spoof
+    # attempts.
+    use-caps-for-id: yes
+
+    # Enable SSL support
+    ssl-service-key: /etc/ssl/private/iserv.key
+    ssl-service-pem: /etc/ssl/certs/iserv.combined

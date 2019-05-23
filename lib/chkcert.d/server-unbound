@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+Phase="$1"
+CertName="$2"
+
+if [ "$Phase" = "post" ] && [ "$CertName" = "iserv" ]
+then
+  iservchk -ra unbound || true
+fi

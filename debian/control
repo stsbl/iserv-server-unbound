@@ -1,0 +1,19 @@
+Source: stsbl-iserv-server-unbound
+Section: misc
+Priority: optional
+Maintainer: Stadtteilschule Blankenese <repository@stsbl.de>
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: iserv3-dev
+Standards-Version: 4.3.0
+
+Package: stsbl-iserv-server-unbound
+Architecture: all
+Depends: ${misc:Depends},
+  ${perl:Depends},
+  iserv-update,
+  iserv-ssl,
+  unbound,
+Description: IServ Unbound-Server
+ Konfiguriert den DNS-Forwarder Unbound zum Weiterleiten von Anfragen an
+ Upstream-Server.
+Tag: suite::iserv

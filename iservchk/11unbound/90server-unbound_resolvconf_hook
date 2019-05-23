@@ -1,0 +1,2 @@
+ChPerm 0755 root:root /etc/resolvconf/update.d/unbound
+
