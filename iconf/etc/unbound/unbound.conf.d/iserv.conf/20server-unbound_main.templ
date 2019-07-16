@@ -31,3 +31,8 @@ server:
     # Enable SSL support
     ssl-service-key: /etc/ssl/private/iserv.key
     ssl-service-pem: /etc/ssl/certs/iserv.combined
+
+remote-control:
+    # Allow usage of `unbound-control` to alter server settings at runtime
+    control-enable: yes
+
