@@ -1,3 +1,11 @@
+stsbl-iserv-server-unbound (19.07.17-1) unstable; urgency=medium
+
+  * Added Xb-Private-IServ-Revision
+  * Explictly enabled usage of unbound-control as default setting was changed
+    in Debian Buster
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Wed, 17 Jul 2019 00:57:06 +0200
+
 stsbl-iserv-server-unbound (19.05.23-1) unstable; urgency=medium
 
   * Initial Release.
