@@ -1,0 +1,4 @@
+remote-control:
+    # Allow usage of "unbound-control" to alter server settings at runtime
+    control-enable: yes
+
