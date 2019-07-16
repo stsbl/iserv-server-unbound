@@ -1,3 +1,9 @@
+stsbl-iserv-server-unbound (19.07.17-3) unstable; urgency=medium
+
+  * Moved remote-control settings to its own iconf template
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Wed, 17 Jul 2019 01:08:02 +0200
+
 stsbl-iserv-server-unbound (19.07.17-2) unstable; urgency=medium
 
   * Fixed iconf template
