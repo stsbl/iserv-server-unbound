@@ -1,3 +1,11 @@
+stsbl-iserv-server-unbound (19.10.13-1) testing; urgency=medium
+
+  * Bumped copyright
+  * Unbound.conf: Fixed missing tls-cert-bundle required for querying
+    upstream DoT server [buster]
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sun, 13 Oct 2019 18:18:37 +0200
+
 stsbl-iserv-server-unbound (19.07.17-3) unstable; urgency=medium
 
   * Moved remote-control settings to its own iconf template
