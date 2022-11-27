@@ -1,3 +1,12 @@
+stsbl-iserv-server-unbound (22.11.27.1) stable; urgency=medium
+
+  * Added check for hanging unbound servers (happens sometimes on stsbl.de
+    with Dataport and Quad9)
+  * Guard unbound-control calls with timeout to prevent hangup when
+    unbound is crashing
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sun, 27 Nov 2022 21:12:45 +0100
+
 stsbl-iserv-server-unbound (21.08.18.1) stable; urgency=medium
 
   * Switched to git source format
