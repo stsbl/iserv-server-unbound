@@ -1,3 +1,6 @@
+Check /etc/resolvconf/update.d/unbound
+ChPerm 0755 root:root /etc/resolvconf/update.d/unbound
+
 Shell "update resolvconf"
   ! [ $REPAIR ] || resolvconf -u
 
