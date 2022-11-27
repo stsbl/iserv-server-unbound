@@ -1,5 +1,5 @@
 Test "hung unbound"
-  ! systemctl is-running unbound ||
+  ! systemctl -q is-active unbound ||
       timeout 5 unbound-control list_forwards
   ---
   i=0
