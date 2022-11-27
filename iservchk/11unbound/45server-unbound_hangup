@@ -1,0 +1,22 @@
+Test "hung unbound"
+  ! systemctl is-running unbound ||
+      timeout 5 unbound-control list_forwards
+  ---
+  i=0
+  while pidof unbound &> /dev/null && [ "$i" -lt 10 ]
+  do
+    let i++ || true
+    systemctl stop unbound &
+    sleep 5
+    if pidof unbound &> /dev/null
+    then
+      systemctl kill unbound &
+      sleep 5
+    fi
+    if pidof unbound &> /dev/null
+    then
+      systemctl kill -s KILL unbound &
+      sleep 5
+    fi
+  done
+
