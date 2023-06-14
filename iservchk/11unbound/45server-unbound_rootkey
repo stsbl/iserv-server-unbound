@@ -1,0 +1,8 @@
+# unbound cannot start with empty root.key, unbound copies root.key at startup,
+# when not found
+Test "rootkey must not be empty"
+  [ -s "/var/lib/unbound/root.key" ] ||
+      ! [ -f "/var/lib/unbound/root.key" ]
+  ---
+  rm -f /var/lib/unbound/root.key
+
