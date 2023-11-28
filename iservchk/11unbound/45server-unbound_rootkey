@@ -6,3 +6,9 @@ Test "rootkey must not be empty"
   ---
   rm -f /var/lib/unbound/root.key
 
+Test "unbound control key"
+  [ -e "/etc/unbound/unbound_control.pem" ] &&
+      [ -e "/etc/unbound/unbound_server.key" ]
+  ---
+  unbound-control-setup -d /etc/unbound/ /sbin/restorecon /etc/unbound/*
+
