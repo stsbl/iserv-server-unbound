@@ -32,4 +32,21 @@ server:
     ssl-service-key: /etc/ssl/private/iserv.key
     ssl-service-pem: /etc/ssl/certs/iserv.combined
     tls-cert-bundle: /etc/ssl/certs/ca-certificates.crt
+    tls-ciphers: "$(</usr/share/iserv/update/tls/config/default/ciphers)"
+    # At the time, Unbound to does not allow to control the TLS version
+    #tls-protocols: "$(
+MIN_VERSION="$(</usr/share/iserv/update/tls/config/default/min_version)"
+TLS_VERSIONS=($(</usr/share/iserv/update/tls/config/tls_versions))
+
+PRINT=0
+VERSIONS=""
+for VERSION in "${TLS_VERSIONS[@]}"
+do
+  { [ "$MIN_VERSION" = "$VERSION" ] || [ "$PRINT" -eq 1 ]; } || continue
+  PRINT=1
+  VERSIONS="$VERSIONS $VERSION"
+done
+
+echo "${VERSIONS}"
+)"
 

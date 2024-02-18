@@ -6,5 +6,5 @@ CertName="$2"
 
 if [ "$Phase" = "post" ] && [ "$CertName" = "iserv" ]
 then
-  iservchk -ra unbound || true
+  systemctl try-restart unbound
 fi
